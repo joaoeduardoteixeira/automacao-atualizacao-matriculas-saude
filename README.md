@@ -1,29 +1,29 @@
-# Atualizador de matrículas de beneficiários de plano de saúde
+# Automação de atualização de matrículas de beneficiários (plano de saúde)
 
-## Problema:
-Ao inserir um beneficiário novo no produto não regulamentado, é gerado um número de matrícula fora dos padrões numéricos.
+## Problema
+Ao cadastrar novos beneficiários em determinados produtos, o sistema gerava matrículas fora do padrão numérico esperado, exigindo intervenção manual do time de TI para correção diretamente no banco de dados.
 
-## Objetivo:
-Ajustar matrículas via interface disponibilizada ao usuário.
+## Solução
+Desenvolvimento de uma interface web que permite ao usuário ajustar a matrícula do beneficiário de forma simples e controlada, eliminando a necessidade de consultas e updates manuais no banco.
 
-## Impacto:
-Autonomia para o usuário executar a tarefa, evitando que o time de TI necessite efetuar consultas e updates quando a situação ocorre.
+A solução realiza:
+- Recebimento de identificador do beneficiário
+- Atualização do código de matrícula diretamente no banco
+- Execução simplificada via interface para o usuário final
 
-## Funcionamento:
-A página recebe um código (pessoa física, neste caso), e atualiza o código de beneficiário. A página de sucesso consta apenas cabeçalho, necessitando de ajustes personalizados de acordo com o objetivo.
+## Impacto
+- Redução da dependência do time de TI para correções operacionais
+- Maior autonomia para usuários de negócio
+- Diminuição de retrabalho e tempo de atendimento
+- Padronização dos dados de matrícula
 
-## Banco de Dados:
-O banco utilizado foi o Oracle e, caso seja necessário, importar a biblioteca apropriada de conexão.
+## Tecnologias utilizadas
+- Python
+- Banco de dados Oracle
+- Interface web (HTML/CSS)
 
-## Dependências
-Executar pip install -r requirements.txt no ambiente.
+## Observações
+Evolução prevista para incluir validação e exibição dos dados antes da atualização, aumentando segurança e rastreabilidade.
 
-## Criador:
+## Autor
 João Eduardo da Silva Teixeira
-
-## Considerações finais:
-É a versão 1 da solução. Na versão 2 serão apresentados os registros para que possam ser confirmados e os retornos já ajustados após a execução. 
-
-## Contato:
-- E-mail: joaoeduardosteixeira@gmail.com
-- Skype: analista.eduardo@hotmail.com
